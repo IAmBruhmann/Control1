@@ -40,12 +40,8 @@ class PrintEditionItem {
     }
 //4.2
     fix() {
-        if (this.state < 100) {
-            this.state *= 1.5;
-            if (this.state > 100) {
-                this.state = 100;
-            }
-        }
+            this.state  = this._state * 1.5;
+            
     }
 //4.3
     set state(newState) {
@@ -85,3 +81,5 @@ console.log(book);
 
 book.fix();
 console.log(book.state);
+
+book.state = 1000
